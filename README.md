@@ -21,3 +21,24 @@ require('dreadcast-operative/release')(gulp);
 
 In your console, type `gulp release:ghpages -patch`
 Replace "patch" with "minor" or "major", according to your semver.
+
+
+## Available tasks ##
+
+* doc:build
+* doc:move
+* doc:checkoutGhPages
+* doc:copy
+* doc:commit
+* doc:push
+* doc:checkoutMaster
+* doc:publish
+* version:bump
+* version:commit
+* version:tag
+* version:bumptag
+* version:push
+* version:full
+* release:ghpages
+* release:docs
+* release:default
