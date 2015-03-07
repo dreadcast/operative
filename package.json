@@ -1,0 +1,38 @@
+{
+	"name": "dreadcast-operative",
+	"version": "0.0.1",
+	"homepage": "https://github.com/dreadcast/operative",
+	"description": "My Gulp recipes",
+	"author": "Raphael Gully",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:dreadcast/operative.git"
+	},
+	"license": "WTFPL",
+	"keywords": [
+		"gulp",
+		"build"
+	],
+	"dependencies": {
+		"fs-extra": "0.16.4",
+		"gulp": "3.8.11",
+		"gulp-git": "1.0.1",
+		"gulp-bump": "0.2.2",
+		"gulp-copy": "0.0.2",
+
+		"swig": "latest",
+		"swig-extras": "latest",
+		"gulp-cheerio": "0.6.2",
+		"gulp-minify-html": "1.0.0",
+		"gulp-markdown": "1.0.0",
+
+		"gulp-uglify": "1.1.0",
+		"gulp-less": "3.0.1",
+		"gulp-autoprefixer": "2.1.0",
+		"gulp-concat": "2.5.2",
+
+		"require-dir": "latest",
+		"yuidocjs": "0.5.0"
+	},
+	"main": "index.js"
+}
