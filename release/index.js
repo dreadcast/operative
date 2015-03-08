@@ -4,6 +4,10 @@ module.exports = function(gulp, conf){
 		version = require('./version')(gulp),
 		runSequence = require('run-sequence').use(gulp);
 	
+	/**
+	 * Build js bump version, build doc, release doc to gh-pages and push changes
+	 * @task release:docs
+	 */
 	gulp.task('release:ghpages', function(done){
 		runSequence(
 			'js:build',
@@ -13,6 +17,11 @@ module.exports = function(gulp, conf){
 			done
 		);
 	});
+	
+	/**
+	 * Build js, build doc, bump version and push changes
+	 * @task release:docs
+	 */
 	gulp.task('release:docs', function(done){
 		runSequence(
 			'js:build',
@@ -21,6 +30,11 @@ module.exports = function(gulp, conf){
 			done
 		);
 	});
+	
+	/**
+	 * Build js, bump version and push changes
+	 * @task release:default
+	 */
 	gulp.task('release:default', function(done){
 		runSequence(
 			'js:build',
