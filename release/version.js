@@ -4,15 +4,21 @@ module.exports = function(gulp, conf){
 		bump = require('gulp-bump'),
 		runSequence = require('run-sequence').use(gulp);
 	
-	var jsonFiles = ['./package.json', './bower.json', './yuidoc.json'],
-		bumpType,
+	if(!conf)
+		var conf = {};
+		
+	if(!conf.jsonFiles)
+		conf.jsonFiles = ['./package.json', './bower.json', './yuidoc.json'];
+		
+	var bumpType = 'patch',
 		version,
 		message;
 	
 	gulp.task('version:bump', function(){
-		bumpType = process.argv[3].replace(/^(\-+)/, '');
+		if(process.argv.length > 3)
+			bumpType = process.argv[3].replace(/^(\-+)/, '');
 		
-		return gulp.src(jsonFiles)
+		return gulp.src(conf.jsonFiles)
 			.pipe(bump({
 				type: bumpType
 			}))
