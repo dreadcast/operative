@@ -29,6 +29,7 @@
     "gulp-autoprefixer": "2.1.0",
     "gulp-concat": "2.5.2",
     "require-dir": "latest",
+	"lodash": "3.5.0",
     "yuidocjs": "0.5.0"
   },
   "main": "index.js",
